@@ -1,12 +1,10 @@
 package com.example.horoscoapp.ui.luck
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.horoscoapp.R
-import com.example.horoscoapp.databinding.FragmentHoroscopeBinding
+import androidx.fragment.app.Fragment
 import com.example.horoscoapp.databinding.FragmentLuckBinding
 
 class LuckFragment : Fragment() {
