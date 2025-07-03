@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.horoscoapp.R
 import com.example.horoscoapp.domain.model.HoroscopeInfo
 
-class HoroscopeAdapter (private var horoscopeList: List<HoroscopeInfo> = emptyList()):
+class HoroscopeAdapter (private var horoscopeList: List<HoroscopeInfo> = emptyList(),
+private val onItemSelected:(HoroscopeInfo) -> Unit):
     RecyclerView.Adapter<HoroscopeViewHolder>() {
 
     @SuppressLint("NotifyDataSetChanged")
@@ -27,6 +28,6 @@ class HoroscopeAdapter (private var horoscopeList: List<HoroscopeInfo> = emptyLi
 
 
     override fun onBindViewHolder(holder: HoroscopeViewHolder, position: Int) {
-        holder.render(horoscopeList[position])
+        holder.render(horoscopeList[position],onItemSelected)
     }
 }
